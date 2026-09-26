@@ -3,46 +3,60 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Thực hành Danh sách trong CSS</title>
+    <title>Thực hành Bảng trong CSS</title>
     <style>
-        /* 1. Định kiểu cho danh sách không có thứ tự (ul) */
-        ul.styled-ul {
-            list-style-type: square; /* Đổi ký hiệu thành hình vuông */
-            list-style-position: inside; /* Đặt ký hiệu bên trong lề */
-            color: #2c3e50; /* Đổi màu chữ toàn bộ danh sách */
+        /* Thiết lập đường viền và gộp viền bảng thành một đường duy nhất */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
         }
 
-        /* Định kiểu riêng cho từng mục li */
-        ul.styled-ul li {
-            background-color: #ecf0f1;
-            margin: 5px 0;
-            padding: 8px;
+        /* Đặt chiều rộng bảng là 100% */
+        table {
+            width: 100%;
         }
 
-        /* 2. Định kiểu cho danh sách có thứ tự (ol) */
-        ol.styled-ol {
-            list-style-type: upper-roman; /* Dùng số La Mã in hoa: I, II, III... */
-            color: #d35400;
+        /* Đặt chiều cao cho thẻ th là 50px */
+        th {
+            height: 50px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: left; /* Căn lề trái nội dung trong th */
+        }
+
+        /* Thiết lập padding khoảng cách nội dung và đường viền */
+        th, td {
+            padding: 12px;
+        }
+
+        /* Căn chỉnh theo chiều dọc xuống dưới (bottom) cho các phần tử td */
+        td {
+            vertical-align: bottom;
+            height: 60px;
         }
     </style>
 </head>
 <body>
 
-    <h2>Bài thực hành: Danh sách trong CSS</h2>
+    <h2>Ví dụ về Bảng trong CSS</h2>
 
-    <h3>Danh sách không có thứ tự (ul)</h3>
-    <ul class="styled-ul">
-        <li>Học thuộc tính list-style-type</li>
-        <li>Tìm hiểu vị trí list-style-position</li>
-        <li>Thực hành đổi màu sắc danh sách</li>
-    </ul>
-
-    <h3>Danh sách có thứ tự (ol)</h3>
-    <ol class="styled-ol">
-        <li>Bước một: Tạo cấu trúc HTML</li>
-        <li>Bước hai: Viết mã CSS trang trí</li>
-        <li>Bước ba: Kiểm tra kết quả</li>
-    </ol>
+    <table>
+        <tr>
+            <th>Mã sinh viên</th>
+            <th>Họ và tên</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>DTC245300153</td>
+            <td>Sinh viên IT</td>
+            <td>cnttk23n</td>
+        </tr>
+        <tr>
+            <td>DTC245300154</td>
+            <td>Nguyễn Văn A</td>
+            <td>cnttk23n</td>
+        </tr>
+    </table>
 
 </body>
 </html>
