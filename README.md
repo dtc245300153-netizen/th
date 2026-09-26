@@ -1,39 +1,48 @@
 # th
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>Box Model 3</title>
-<style>
-#demo {
-   width: 350px;
-   display: flex;
-   float: left;
-   border: 6px solid black;
-   border-radius: 6%;
-}
-.d1 {
-   margin-left: 20px;
-   width: 150px;
-   height: 80px;
-   box-shadow: 0 0 0 4px mediumslateblue;
-   box-sizing: border-box;
-   border-radius: 36%;
-}
-.d2 {
-   width: 150px;
-   height: 80px;
-   padding: 30px;
-   box-shadow: 0 0 0 4px darkred;
-   box-sizing: border-box;
-   border-radius: 36%;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Responsive</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="demo">
-<div class="d1"></div>
-<div class="d2"></div>
-</div>
+    <header class="header">
+        <div class="logo">MyBrand</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Đánh giá</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Chào mừng đến với MyBrand</h1>
+        <p>Giải pháp số 1 cho doanh nghiệp của bạn</p>
+        <a href="#services" class="btn">Tìm hiểu thêm</a>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Dịch vụ của chúng tôi</h2>
+        <div class="service-container">
+            <div class="service">Thiết kế web</div>
+            <div class="service">Phát triển phần mềm</div>
+            <div class="service">Marketing số</div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Khách hàng nói gì?</h2>
+        <div class="testimonial">"Dịch vụ tuyệt vời!" - Khách hàng A</div>
+        <div class="testimonial">"Tôi rất hài lòng với MyBrand." - Khách hàng B</div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 MyBrand. All rights reserved.</p>
+    </footer>
 </body>
 </html>
